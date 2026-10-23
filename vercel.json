@@ -1,16 +1,16 @@
 {
-  "version": 2,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS" }
-      ]
-    }
-  ],
+  "cleanUrls": true,
   "routes": [
-    { "src": "/_nuxt/(.*)", "dest": "/_nuxt/$1" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    {
+      "src": "/_nuxt/(.*)",
+      "dest": "/_nuxt/$1"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
