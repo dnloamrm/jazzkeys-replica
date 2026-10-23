@@ -34,47 +34,49 @@ const navItems = [
 ]
 </script>
 
-<style scoped>
+<style>
+/* Força a visibilidade global sem scoped para sobrepor a introdução */
 .dock-navigation {
-  position: fixed;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: fixed !important;
+  bottom: 24px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
   display: flex !important;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  z-index: 9999;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  z-index: 2147483647 !important; /* Valor máximo de z-index para ficar sempre no topo */
   visibility: visible !important;
   opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 .dock-btn {
-  width: 64px;
-  height: 64px;
-  min-width: 64px;
-  min-height: 64px;
-  border-radius: 50%;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-  color: #ffffff;
+  width: 64px !important;
+  height: 64px !important;
+  min-width: 64px !important;
+  min-height: 64px !important;
+  border-radius: 50% !important;
+  border: none !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: transform 0.2s ease, background-color 0.2s ease !important;
+  color: #ffffff !important;
 }
 
 .dock-btn:hover {
-  transform: scale(1.08);
-  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.08) !important;
+  background-color: rgba(255, 255, 255, 0.25) !important;
 }
 
 .mdi-icon {
-  width: 28px;
-  height: 28px;
-  fill: currentColor;
+  width: 28px !important;
+  height: 28px !important;
+  fill: currentColor !important;
 }
 </style>
