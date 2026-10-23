@@ -40,11 +40,13 @@ const navItems = [
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  z-index: 100;
+  z-index: 9999;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .dock-btn {
